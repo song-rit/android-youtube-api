@@ -29,7 +29,8 @@ public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.O
         player.setPlayerStateChangeListener(playerStateChangeListener());
         player.setPlaybackEventListener(playbackEventListener());
         if (!wasRestored) {
-            player.cueVideo(videoCode);
+            player.loadVideo(videoCode);
+            player.setFullscreen(true);
         }
     }
 
